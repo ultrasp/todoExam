@@ -8,7 +8,7 @@ class AdminController extends Controller
 {
 	public $needAuth = true;
 
-	public function list($request){
+	public function listItem($request){
 		$id = $request->getParam('id');
 		$t = null;
 		$t = (!empty($id)) ?  Todo::get($id) : null;

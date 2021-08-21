@@ -6,7 +6,7 @@ use App\Base\Session;
 
 class TodoController extends Controller
 {
-	public function list($request){
+	public function listItem($request){
 
 		$data = Todo::getItems($request->getParam('page'),$request->getQuery('orderBy'),$request->getQuery('orderType') );
 

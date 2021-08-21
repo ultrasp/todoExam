@@ -9,7 +9,7 @@ class Controller{
 	public $needAuth = false;
 
 	function __construct(){
-		$this->main_path = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'App/Views/'.DIRECTORY_SEPARATOR;
+		$this->main_path = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'app/Views/'.DIRECTORY_SEPARATOR;
 	}
 
 	function loadView($page, $data = array()) {
