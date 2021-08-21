@@ -85,7 +85,7 @@
 	    	<?php endif ?>
 		  </div>
 		  <div class="custom-control custom-checkbox">
-			  <input type="checkbox" name="isFinished" value="1" class="custom-control-input" id="customCheck1">
+			  <input type="checkbox" <?=$curItem['status'] == 'finished' ? 'checked' : ''?> name="isFinished" value="1" class="custom-control-input" id="customCheck1">
 			  <label class="custom-control-label" for="customCheck1">Is finished</label>
 			</div>
 		  <button type="submit" class="btn btn-primary">Submit</button>

@@ -20,13 +20,12 @@ class Todo extends BaseModel
 
 	public static function update($id,$description,$isFinished = 0){
 		$item = self::get($id);
-		
 		$db = self::getLink();
 		$db->where ('id', $id);
 		$db->update (self::$table, [
 			'description' => $description,
 			'status' => $isFinished ? self::STATUS_FINISHED : self::STATUS_DRAFT,
-			'is_admin_changed' => ($item->description == $description ) ? 0 : 1
+			'is_admin_changed' => ($item['description'] == $description ) ? 0 : 1
 		]);
 	}
 
