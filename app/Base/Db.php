@@ -19,7 +19,6 @@ class Db
 
 	private function initConnection()
 	{
-		// $this->con = new \MysqliDb ('127.0.0.1', 'ultrasp', 'Danger@2016', 'ultrasp');
 		$this->con = new \MysqliDb ('127.0.0.1', 'root', '', 'todos');
 		return $this->con;
 	}
